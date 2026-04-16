@@ -1,0 +1,88 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Biblioteca</title>
+    <link rel="stylesheet" href="Separado_proyecto.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+        <h2>Horas Sociales</h2>
+        <ul>
+            <li>Inicio</li>
+            <li>Buscar estudiantes</li>
+            <li class="active">Proyectos</li>
+            <li>Registrar horas</li>
+            <li>Notificaciones</li>
+            <li>Perfil</li>
+        </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main">
+
+        <h1>Proyectos:</h1>
+
+<div class="cards">
+    <div class="card" onclick="editar(this)">📅 <span>Fecha</span></div>
+    <div class="card" onclick="editar(this)">⏱ <span>Horas</span></div>
+    <div class="card" onclick="editar(this)">👤 <span>Profesor encargado</span></div>
+    <div class="card" onclick="editar(this)">📝 <span>Labor</span></div>
+    <div class="card" onclick="editar(this)">👥 <span>Cupos</span></div>
+</div>
+
+        <!-- Tabla -->
+        <h2>Estudiantes inscritos</h2>
+
+        <div class="header-estudiantes">
+    <button class="btn-add" onclick="agregarEstudiante()">+</button>
+</div>
+
+<!-- Contenedor de estudiantes -->
+<div id="lista-estudiantes"></div>
+
+    </main>
+
+</div>
+<script>
+function agregarEstudiante() {
+    let nombre = prompt("Nombre del estudiante:");
+    let grado = prompt("Grado:");
+    let fecha = prompt("Fecha:");
+
+    if (nombre && grado && fecha) {
+        let contenedor = document.getElementById("lista-estudiantes");
+
+        let div = document.createElement("div");
+        div.classList.add("estudiante");
+
+        div.innerHTML = `
+            <span>${nombre} - ${grado} - ${fecha}</span>
+            <button>Registrar</button>
+        `;
+
+        contenedor.appendChild(div);
+    }
+}
+</script>
+
+<script>
+function editar(elemento) {
+    let span = elemento.querySelector("span");
+    let valorActual = span.innerText;
+
+    let nuevoValor = prompt("Editar valor:", valorActual);
+
+    if (nuevoValor !== null && nuevoValor !== "") {
+        span.innerText = nuevoValor;
+    }
+}
+</script>
+
+
+</body>
+</html>
