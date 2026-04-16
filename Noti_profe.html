@@ -1,0 +1,119 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Notificaciones</title>
+  <link rel="stylesheet" href="Noti_profe.css">
+  <script src="script.js"></script>
+</body>
+</html>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Menú lateral -->
+  <div class="sidebar">
+    <h2>Horas Sociales</h2>
+    <div class="menu-item">Inicio</div>
+    <div class="menu-item">Buscar estudiantes</div>
+    <div class="menu-item">Proyectos</div>
+    <div class="menu-item">Registrar horas</div>
+    <div class="menu-item active">Notificaciones</div>
+    <div class="menu-item">Perfil</div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="main">
+    <h1>Notificaciones</h1>
+
+    <!-- NOTIFICACIONES -->
+    <div class="notificacion">
+      <p id="texto-1">Nuevo usuario 3 se ha inscrito en el proyecto.</p>
+      <button onclick="editarNotificacion(1)">Editar</button>
+    </div>
+
+    <div class="notificacion">
+      <p id="texto-2">Nuevo usuario 2 se ha inscrito en el proyecto.</p>
+      <button onclick="editarNotificacion(2)">Editar</button>
+    </div>
+
+    <div class="notificacion">
+      <p id="texto-3">Juan Pérez se ha inscrito en el proyecto Biblioteca.</p>
+      <button onclick="editarNotificacion(3)">Editar</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<div class="container">
+
+    <!-- Menú lateral -->
+    <div class="sidebar">
+        <h2>Horas Sociales</h2>
+        <div class="menu-item">Inicio</div>
+        <div class="menu-item">Buscar estudiantes</div>
+        <div class="menu-item">Proyectos</div>
+        <div class="menu-item">Registrar horas</div>
+        <div class="menu-item active">Notificaciones</div>
+        <div class="menu-item">Perfil</div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main">
+        <div class="header">
+            <h2>Notificaciones</h2>
+            <span class="marcar">Marcar todas como leídas</span>
+        </div>
+
+        <div class="tabs">
+            <span class="active">Todas</span>
+            <span>Sin leer (3)</span>
+            <span>Solicitudes</span>
+            <span>Sistema</span>
+        </div>
+
+        <!-- Notificaciones -->
+        <div class="card">
+            <div class="user">
+                <div class="icon blue"></div>
+                <div>
+                    <div>Juan Pérez se ha inscrito en el proyecto Biblioteca.</div>
+                    <div class="time">Hace 5 minutos</div>
+                </div>
+            </div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="card">
+            <div class="user">
+                <div class="icon green"></div>
+                <div>
+                    <div>María Gómez se ha inscrito en el proyecto Biblioteca.</div>
+                    <div class="time">Hace 10 minutos</div>
+                </div>
+            </div>
+            <div class="dot"></div>
+        </div>
+
+        <div class="card">
+            <div class="user">
+                <div class="icon yellow"></div>
+                <div>
+                    <div>Carlos Ramírez se ha inscrito en el proyecto Biblioteca.</div>
+                    <div class="time">Hace 15 minutos</div>
+                </div>
+            </div>
+            <div class="dot"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
